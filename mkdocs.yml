@@ -50,25 +50,13 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-  markdown_extensions:
+markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
-  - markdown_include.include:
-      base_path: docs
-  - mdx_gh_links:
-      user: mitsuhiko
-      repo: rye
 
-  plugins:
-  - search
-
-  extra:
-    - version:
-      provider: mike
-    - social:
-      - icon: fontawesome/brands/mastodon 
-        link: https://fosstodon.org/@squidfunk
+extra_css:
+  - static/extra.css
