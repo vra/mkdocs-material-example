@@ -1,4 +1,74 @@
 site_name: Mkdocs Material Example
+site_description: An Experimental Package Management Solution for Python
+repo_name: vra/mkdocs-material-example
+repo_url: https://github.com/vra/mkdocs-material-example
+copyright: Copyright &copy; 2023 Yunfeng Wang
+
+
+nav:
+  - Welcome: index.md
+  - User Guide:
+    - guide/index.md
+    - Installation: guide/installation.md
+    - Basics: guide/basics.md
+    - Configuration: guide/config.md
+  - Changelog: changelog.md
 
 theme:
   name: material
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - toc.integrate
+    - toc.follow
+    - navigation.path
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+  palette: 
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - markdown_include.include:
+      base_path: docs
+  - mdx_gh_links:
+      user: mitsuhiko
+      repo: rye
+
+  plugins:
+  - search
+
+  extra:
+    - version:
+      provider: mike
+    - social:
+      - icon: fontawesome/brands/mastodon 
+        link: https://fosstodon.org/@squidfunk
